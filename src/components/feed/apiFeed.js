@@ -36,7 +36,7 @@ export const getActivity = () =>{
     .catch((errors) => {
         console.log(errors);
     });
-}
+} 
 
 
 //get user by id

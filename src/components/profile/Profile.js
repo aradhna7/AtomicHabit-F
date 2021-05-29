@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState } from 'react'
 import {isAuthenticated} from '../auth/apiAuth'
 import { getUserById } from '../feed/apiFeed';
 import Moment from 'react-moment';

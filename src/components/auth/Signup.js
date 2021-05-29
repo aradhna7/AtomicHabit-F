@@ -49,11 +49,11 @@ const Signup = () => {
         })
     }
 
-    const redirectUser = () =>{
-        if(redirectToReferrer){
-            return <Redirect to="/feed" />
-        }
-    }
+    // const redirectUser = () =>{
+    //     if(redirectToReferrer){
+    //         return <Redirect to="/feed" />
+    //     }
+    // }
 
     const showError = () =>{
         return <div className="alert alert-danger" style={{display : error ? '' : 'none'}}>
@@ -74,7 +74,7 @@ const Signup = () => {
             {showError()}
             {redirectToReferrer && <Redirect to="/feed" />}
             <span className="login100-form-title">
-                Signup
+                Sign Up
             </span>
             <div className="wrap-input100 validate-input" data-validate="Valid name is required: abcde">
                 <input type="text" name="name" className="form-control" value={name} onChange={e=> handleChange(e)} id="exampleInputEmail1" placeholder="Enter name" required/>
@@ -91,14 +91,14 @@ const Signup = () => {
                 </span>
             </div>
             <div className="container-login100-form-btn">
-                <button className="btn btn-dark btn-block">
-                Login
+                <button className="btn btn-block" style={{background:"#23049d", color:'white'}}>
+                Register
                 </button>
             </div>
             <br />
             <div className="text-center p-t-136">
-                <Link to="/signup">
-                    Create your Account
+                <Link to="/signin">
+                    Already have an Account? LogIn
                 </Link>
             </div>
         </form>

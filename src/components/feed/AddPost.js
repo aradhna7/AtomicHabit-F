@@ -70,7 +70,8 @@ const AddPost = () => {
                 Create a Post
             </span>
             <div className="wrap-input100 validate-input" data-validate="title is required">
-                <textarea  name="title" value={title}  onChange={e=> {setTitle(e.target.value); setError('')}} className="form-control" id="exampleInputPassword1" placeholder="Title" required />
+            <label>Caption:</label>
+                <input  name="title" value={title}  onChange={e=> {setTitle(e.target.value); setError('')}} className="form-control" id="exampleInputPassword1" placeholder="Enter Caption for your post" required />
                 <span className="focus-input100"></span>
                 <span className="symbol-input100">
                 </span>
@@ -80,14 +81,16 @@ const AddPost = () => {
               </div>
               <div className="previewProfilePic">
                 
-              </div>
+              </div><br />
               OR
-              <input  name="title" value={image}  onChange={e=> {setImgData(e.target.value); setError('')}} className="form-control" id="exampleInputPassword1" placeholder="Image link" required />
+              <br />
+              <br></br>
+              <input  name="title" value={image}  onChange={e=> {setImgData(e.target.value); setError('')}} className="form-control" id="exampleInputPassword1" placeholder="Image link" style={{fontWeight: 400}}required />
                 <span className="focus-input100"></span>
                 <span className="symbol-input100"></span>
             <br />
             <div className="container-login100-form-btn">
-                <button className="btn btn-dark btn-block">
+                <button className="btn btn-block" style={{background:"#23049d", color:'white'}}>
                 Post
                 </button>
             </div>

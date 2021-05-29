@@ -1,3 +1,26 @@
+body{
+  font-family: 'Cabin', sans-serif;
+}
+.container-main{
+  margin:0px
+}
+
+.nav{
+  background-color: #23049d;
+  color:whitesmoke
+}
+.allPosts{
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .container-login100 {
     width: 100%;  
     min-height: 100vh;
@@ -10,8 +33,8 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+    background-color: whitesmoke;
+    /* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
     /* background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
     background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
     background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -199,8 +222,7 @@
   }
 
 .feed{
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  background-color: #fff;
 }
 .centerDiv{
   margin-top:auto;
@@ -210,21 +232,23 @@
 }
 
 .post-img{
-  width: 60%;
-  
+  width: 350px;
+  height: 300px;
 }
 
 .post{
   background-color: #f6f5f5;
   margin: 10px 0;
   text-align: center;
+  margin:2%;
   /* border:2px solid #808080; */
 }
 
 .activity{
-  background: #fabc7f;
-
+  background-color: #867ae9 ;
   border-radius: 10px;
+  padding: 2%;
+  margin: 5% 5% 0% 5%;
 }
 
 .activity p{
@@ -232,10 +256,13 @@
   font-size: 17px;
 }
 
+.task-btn{
+  margin: 2% 5%;
+}
 
 a {
   font-weight: 400;
-    color: #0d6efd;
+    color: #867ae9;
     text-decoration: none;
 }
 
@@ -366,7 +393,7 @@ h6 {
 }
 
 
-
+/* 
 .homepage{
   background: url('./images/download.png') no-repeat ;
   -webkit-background-size: contain;
@@ -376,7 +403,7 @@ h6 {
   width: 100%;
   height: auto;
   
-}
+} */
 
 #bg {
   position: fixed; 
@@ -397,15 +424,16 @@ h6 {
 }
 
 .set-bg {
-  background: url('./images/download.png') no-repeat ;
+  background: url('./images/atom.jpeg') no-repeat ;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
   overflow: hidden;
+  /* opacity: 0.4; */
 }
 
 .hs-item {
-	height: 100vh;
+	height: 98vh;
 	display: table;
 	width: 100%;
 }
@@ -413,6 +441,12 @@ h6 {
 .hs-text {
 	display: table-cell;
 	vertical-align: middle;
+
+}
+.container-home{
+  width:500px;
+  position: relative;
+  left: 60%;
 }
 
 .hs-text h2 {
@@ -420,6 +454,7 @@ h6 {
 	color: #fff;
 	font-weight: 400;
 	font-size: 7.3rem;
+  opacity: 10000;
 }
 
 @media(max-width: 700px){

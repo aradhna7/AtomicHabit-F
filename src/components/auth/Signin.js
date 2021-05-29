@@ -74,7 +74,7 @@ const Signin = () => {
             {showError()}
             {redirectUser()}
             <span className="login100-form-title">
-                Login
+                Log In
             </span>
             <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                 <input type="email" name="email" className="form-control" value={email} onChange={e=> handleChange(e)} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
@@ -88,14 +88,14 @@ const Signin = () => {
                 </span>
             </div>
             <div className="container-login100-form-btn">
-                <button className="btn btn-dark btn-block">
-                Login
+                <button className="btn btn-block" style={{background:"#23049d", color:'white'}}>
+                Log In
                 </button>
             </div>
             <br />
             <div className="text-center p-t-136">
                 <Link to="/signup">
-                    Create your Account
+                    New User? Create your Account
                 </Link>
             </div>
         </form>
