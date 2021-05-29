@@ -19,6 +19,26 @@ export const getAllPost = (token) =>{
     });
 }
 
+
+//get all post
+export const getActivity = () =>{
+    return fetch("https://atomichabitsapi.herokuapp.com/api/activity",{
+        method: "GET",
+        headers: {
+            'x-auth-token': JSON.parse(localStorage.getItem("token"))
+        }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+        return data
+    })
+    .catch((errors) => {
+        console.log(errors);
+    });
+}
+
+
 //get user by id
 export const getUserById = (id) =>{
     return fetch("https://atomichabitsapi.herokuapp.com/api/users/${id}",{
