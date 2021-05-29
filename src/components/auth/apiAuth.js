@@ -2,7 +2,7 @@
 //register user
 export const signup = ({name, email, password}) =>{
     console.log(JSON.stringify({name, email, password}))
-    return fetch("https://hacktwobackend.herokuapp.com/api/users",{
+    return fetch("https://atomichabitsapi.herokuapp.com/api/users/register",{
         method: "POST",
         headers: {
             'Content-type': 'application/json'
@@ -22,7 +22,7 @@ export const signup = ({name, email, password}) =>{
 //signin user
 export const signin = (user) => {
     // console.log(user);
-    return fetch(`https://hacktwobackend.herokuapp.com/api/auth`, {
+    return fetch(`https://atomichabitsapi.herokuapp.com/api/users/login`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -66,9 +66,9 @@ export const signout = (next) =>{
 
 //to check if authenticated
 export const isAuthenticated = () =>{
-    // if(typeof window == 'undefined'){
-    //     return false;
-    // }
+    if(typeof window == 'undefined'){
+        return false;
+    }
     if(localStorage.getItem("token")){
         return JSON.parse(localStorage.getItem("token"));
     }

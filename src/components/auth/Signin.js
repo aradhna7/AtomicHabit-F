@@ -85,7 +85,6 @@ const Signin = () => {
                 <input type="password" name="password" value={password}  onChange={e=> handleChange(e)} className="form-control" id="exampleInputPassword1" placeholder="Password" required />
                 <span className="focus-input100"></span>
                 <span className="symbol-input100">
-                <i className="fa fa-lock" aria-hidden="true"></i>
                 </span>
             </div>
             <div className="container-login100-form-btn">
