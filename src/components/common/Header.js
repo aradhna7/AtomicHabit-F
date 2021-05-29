@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
-import {signout} from '../auth/apiAuth'
+import {signout, isAuthenticated} from '../auth/apiAuth'
 
 
 const Header = () => {
@@ -13,15 +13,16 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="ml-auto">
                     <NavDropdown title="USER" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
+                        {isAuthenticated() &&  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>}
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/signin">Signin</Nav.Link>
-                    <Nav.Link href="/signup">Signup</Nav.Link>
-                    <Nav.Link href="/signin" onClick={()=>signout()}>SIGNOUT</Nav.Link>
+                    {isAuthenticated() &&  <Nav.Link href="/post" onClick={()=>signout()}>Post</Nav.Link>}
+                    {!isAuthenticated() &&  <Nav.Link href="/signin">Signin</Nav.Link>}
+                    {!isAuthenticated() &&  <Nav.Link href="/signup">Signup</Nav.Link>}
+                    {isAuthenticated() &&  <Nav.Link href="/signin" onClick={()=>signout()}>SIGNOUT</Nav.Link>}
                     
                     </Nav>
                 </Navbar.Collapse>
