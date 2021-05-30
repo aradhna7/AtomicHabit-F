@@ -15,9 +15,10 @@ const Post = ({title, image, id, comments, likes, username}) => {
 
     return (
         <div class="card post">
-            <div>
-            <img class="card-img-top post-img" src={image} alt="Card cap" />
+            <div className='feed-img'>
+                <img class="card-img-top post-img" src={image} alt="Card cap" />
             </div>
+            
             <ul class="list-group list-group-flush">
             <li class="list-group-item">{title}</li>
             </ul>

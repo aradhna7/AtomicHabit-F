@@ -13,12 +13,21 @@ body{
   display: flex;
   justify-content: center;
 }
+@media (max-width: 640px) {
+  .allPosts{
+    flex-direction: column;
+  }
+}
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.feed-img{
+  overflow: hidden;
 }
 
 .container-login100 {
