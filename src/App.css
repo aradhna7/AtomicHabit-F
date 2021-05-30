@@ -13,12 +13,21 @@ body{
   display: flex;
   justify-content: center;
 }
+@media (max-width: 640px) {
+  .allPosts{
+    flex-direction: column;
+  }
+}
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.feed-img{
+  overflow: hidden;
 }
 
 .container-login100 {
@@ -463,5 +472,17 @@ h6 {
     color: #fff;
     font-weight: 400;
     font-size: 3.2rem;
+  }
+}
+
+.lottie{
+  height: auto;
+  width: 300px;
+}
+
+@media (max-width:700px) {
+  .lottie{
+    height: auto;
+    width: 200px;
   }
 }

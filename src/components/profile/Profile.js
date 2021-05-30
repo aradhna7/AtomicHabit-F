@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react'
 import {isAuthenticated} from '../auth/apiAuth'
 import { getUserById } from '../feed/apiFeed';
 import Moment from 'react-moment';
+import AnimationYoga from '../animation/AnimationYoga';
 
 
 
@@ -55,6 +56,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+            <AnimationYoga />
         </div>
 </div>
     )
